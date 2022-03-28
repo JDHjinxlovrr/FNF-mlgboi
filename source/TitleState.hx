@@ -69,7 +69,7 @@ class TitleState extends MusicBeatState
 
 	#if TITLE_SCREEN_EASTER_EGG
 	var easterEggKeys:Array<String> = [
-		'SHADOW', 'RIVER', 'SHUBS', 'BBPANZU'
+		'MLG', 'JDH', 'JINX', 'QTIIIQ'
 	];
 	var allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var easterEggKeysBuffer:String = '';
@@ -158,16 +158,16 @@ class TitleState extends MusicBeatState
 		if (FlxG.save.data.psychDevsEasterEgg == null) FlxG.save.data.psychDevsEasterEgg = ''; //Crash prevention
 		switch(FlxG.save.data.psychDevsEasterEgg.toUpperCase())
 		{
-			case 'SHADOW':
+			case 'MLG':
 				titleJSON.gfx += 210;
 				titleJSON.gfy += 40;
-			case 'RIVER':
+			case 'JDH':
 				titleJSON.gfx += 100;
 				titleJSON.gfy += 20;
-			case 'SHUBS':
+			case 'JINX':
 				titleJSON.gfx += 160;
 				titleJSON.gfy -= 10;
-			case 'BBPANZU':
+			case 'QTIIIQ':
 				titleJSON.gfx += 45;
 				titleJSON.gfy += 100;
 		}
@@ -284,19 +284,19 @@ class TitleState extends MusicBeatState
 		switch(easterEgg.toUpperCase())
 		{
 			#if TITLE_SCREEN_EASTER_EGG
-			case 'SHADOW':
+			case 'MLG':
 				gfDance.frames = Paths.getSparrowAtlas('ShadowBump');
 				gfDance.animation.addByPrefix('danceLeft', 'Shadow Title Bump', 24);
 				gfDance.animation.addByPrefix('danceRight', 'Shadow Title Bump', 24);
-			case 'RIVER':
+			case 'JDH':
 				gfDance.frames = Paths.getSparrowAtlas('RiverBump');
 				gfDance.animation.addByIndices('danceLeft', 'River Title Bump', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 				gfDance.animation.addByIndices('danceRight', 'River Title Bump', [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-			case 'SHUBS':
+			case 'JINX':
 				gfDance.frames = Paths.getSparrowAtlas('ShubBump');
 				gfDance.animation.addByPrefix('danceLeft', 'Shub Title Bump', 24, false);
 				gfDance.animation.addByPrefix('danceRight', 'Shub Title Bump', 24, false);
-			case 'BBPANZU':
+			case 'QTIIIQ':
 				gfDance.frames = Paths.getSparrowAtlas('BBBump');
 				gfDance.animation.addByIndices('danceLeft', 'BB Title Bump', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
 				gfDance.animation.addByIndices('danceRight', 'BB Title Bump', [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
@@ -305,7 +305,8 @@ class TitleState extends MusicBeatState
 			default:
 			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
 			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
-			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
+			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!! 
+			//no i wont
 				gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 				gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
@@ -575,16 +576,16 @@ class TitleState extends MusicBeatState
 			{
 				case 1:
 					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
+					createCoolText(['vs mlg boi'], 15);
 					#else
 					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
 					#end
 				// credTextShit.visible = true;
 				case 3:
 					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
+					addMoreText('mlg boi', 15);
+					addMoreText('jdh', 15);
+					addMoreText('and some other people', 15);
 					#else
 					addMoreText('present');
 					#end
@@ -597,12 +598,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.screenCenter();
 				case 5:
 					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
+					createCoolText(['made', 'with'], -40);
 					#else
-					createCoolText(['In association', 'with'], -40);
+					createCoolText(['made', 'with'], -40);
 					#end
 				case 7:
-					addMoreText('newgrounds', -40);
+					addMoreText('psych engine', -40);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 8:
@@ -624,13 +625,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('FNF');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('VS');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('MLG BOI'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();
@@ -653,13 +654,13 @@ class TitleState extends MusicBeatState
 				var sound:FlxSound = null;
 				switch(easteregg)
 				{
-					case 'RIVER':
+					case 'MLG':
 						sound = FlxG.sound.play(Paths.sound('JingleRiver'));
-					case 'SHUBS':
+					case 'JDH':
 						sound = FlxG.sound.play(Paths.sound('JingleShubs'));
-					case 'SHADOW':
+					case 'JINX':
 						FlxG.sound.play(Paths.sound('JingleShadow'));
-					case 'BBPANZU':
+					case 'QTIIIQ':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
 					
 					default: //Go back to normal ugly ass boring GF
@@ -708,9 +709,10 @@ class TitleState extends MusicBeatState
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
 				#if TITLE_SCREEN_EASTER_EGG
-				if(easteregg == 'SHADOW')
+				if(easteregg == 'JINX')
 				{
 					FlxG.sound.music.fadeOut();
+					
 				}
 				#end
 			}
